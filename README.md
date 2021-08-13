@@ -1,4 +1,4 @@
-# Team Profile Generator
+# 👩‍💻 Team Profile Generator
 
 This tool will help users generate an HTML page to display summaries for each person on their team.
 

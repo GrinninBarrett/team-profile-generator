@@ -13,15 +13,27 @@ const template = `
     <title>My Team</title>
 </head>
 
-<body class="container-fluid">
+<body>
 
     <header class="bg-success bg-gradient p-5">
         <h1 class="text-center text-light">My Team</h1>
     </header>
 
     <main>
-        <div class="container-fluid">
-            
+        <div class="container-fluid row align-items-center justify-content-center m-0 p-5">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>${employeeName}</h3>
+                        <h5>${employeeTitle}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">ID: ${employeeID}</li>
+                        <li class="list-group-item">Email: ${employeeEmail}</li>
+                        <li class="list-group-item">Office Number / GitHub / School</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 
