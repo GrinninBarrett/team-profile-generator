@@ -40,5 +40,7 @@ function addManager() {
         })
 }
 
+// TODO: Add function to add employee based on role or exit (finish and write HTML file)
+
 
 addManager();
