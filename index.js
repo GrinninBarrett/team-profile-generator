@@ -1,12 +1,12 @@
-const Employee = require("./Employee");
-const Manager = require("./Manager");
-const Engineer = require("./Engineer");
-const Intern = require("./Intern");
+const Employee = require("./lib/Employee");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-function buildTeam() {
+function init() {
     inquirer
         .prompt([
             {
@@ -16,7 +16,7 @@ function buildTeam() {
             },
             {
                 type: "input",
-                name: "ID",
+                name: "id",
                 message: "What is the manager's employee ID?"
             },
             {
@@ -28,23 +28,16 @@ function buildTeam() {
                 type: "input",
                 name: "office",
                 message: "What is the manager's office number?"
-            },
-            {
-                type: "list",
-                name: "add",
-                message: "What would you like to do?",
-                choices: [" Add an engineer", " Add an intern", " Finish building team"]
             }
         ])
         .then((response) => {
-            if (response.add === response.choices[2]) {
-
-            }
+            const manager = new Manager(response.manager.trim(), response.id.trim(), response.email.trim(), response.office.trim());
+            console.log(manager);
+            console.log(manager.getRole())
         })
-}
 
-function init() {
-    buildTeam();
 }
 
 init();
+
+
