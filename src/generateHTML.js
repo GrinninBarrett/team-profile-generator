@@ -1,4 +1,4 @@
-// Creates card for employee type: Manager
+// Creates card for Manager
 const managerCard = `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
@@ -15,9 +15,9 @@ const managerCard = `
     </div>
 </div>
 
-`
+`;
 
-// Creates card for employee type: Engineer
+// Creates card for Engineer
 const engineerCard = `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
@@ -29,14 +29,32 @@ const engineerCard = `
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engineer.id}</li>
             <li class="list-group-item">Email: ${engineer.email}</li>
-            <li class="list-group-item">Office Number: ${engineer.gitHub}</li>
+            <li class="list-group-item">GitHub: ${engineer.gitHub}</li>
         </ul>
     </div>
 </div>
 
-`
+`;
 
 
+// Creates card for Intern
+const internCard = `
+
+<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+    <div class="card">
+        <div class="card-header">
+            <h3>${intern.name}</h3>
+            <h4><i class="bi bi-laptop"></i></i>Intern</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${intern.id}</li>
+            <li class="list-group-item">Email: ${intern.email}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
+        </ul>
+    </div>
+</div>
+
+`;
 
 
 // Writes entire HTML file after all other pieces have been put together
