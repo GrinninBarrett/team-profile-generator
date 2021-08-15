@@ -15,7 +15,7 @@ let fullTeam = [];
 
 // Upon starting the application, add a manager
 function addManager() {
-    inquirer
+    return Zinquirer
         .prompt([
             {
                 type: "input",
@@ -53,7 +53,7 @@ function addManager() {
 
 // Add employees until Manager exits application
 function addEmployee() {
-    inquirer
+    return inquirer
         .prompt([
             {
                 type: "list",

@@ -1,7 +1,7 @@
 const Employee = require("../lib/Employee");
 
 // Creates card for Manager
-function managerCard() {
+function createManagerCard() {
 
     return `
 
@@ -24,7 +24,7 @@ function managerCard() {
 } 
 
 // Creates card for Engineer
-function engineerCard() {
+function createEngineerCard() {
 
     return `
 
@@ -48,7 +48,7 @@ function engineerCard() {
 
 
 // Creates card for Intern
-function internCard() {
+function createInternCard() {
     return `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
@@ -66,33 +66,6 @@ function internCard() {
 </div>
     
     `;
-}
-
-
-// Function to combine all added employee cards
-function combineCards(fullTeam) {
-
-    const cardsArray = fullTeam.map(employee => {
-
-        // Check role for each employee in fullTeam array using the getRole() method
-        let role = employee.getRole();
-
-        if (role === "Manager") {
-            return managerCard;
-        }
-
-        if (role === "Engineer") {
-            return engineerCard;
-        }
-
-        if (role === "Intern") {
-            return internCard;
-        }
-    });
-
-    const employeeCards = cardsArray.join("");
-
-    return employeeCards;
 }
 
 
@@ -133,6 +106,39 @@ function finalDocument(employeeCards) {
 }
 
 
+// Function to combine all added employee cards
+function generateHTML(fullTeam) {
+
+    // Create new array of employee cards based on employee role
+    const cardsArray = fullTeam.map(employee => {
+
+        // Check role for each employee in fullTeam array using the getRole() method
+        let role = employee.getRole();
+
+        if (role === "Manager") {
+            let managerCard = createManagerCard();
+            return managerCard;
+        }
+
+        if (role === "Engineer") {
+            let engineerCard = createEngineerCard();
+            return engineerCard;
+        }
+
+        if (role === "Intern") {
+            let internCard = createInternCard();
+            return internCard;
+        }
+    });
+
+    const employeeCards = cardsArray.join("");
+
+    const finishedHTML = finalDocument(employeeCards);
+
+    return finishedHTML;
+}
+
+
 
 
 // TODO: Update this file with template literals of card elements for each employee type
@@ -147,4 +153,4 @@ function finalDocument(employeeCards) {
 // then join them into a string as one variable, then add that into the overall HTML file.
 
 
-module.exports = finalDocument;
+module.exports = generateHTML;
