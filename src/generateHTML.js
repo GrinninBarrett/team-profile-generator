@@ -1,4 +1,27 @@
-const template = `
+// Creates card for employee type: manager
+const managerCard = `
+
+<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+    <div class="card">
+        <div class="card-header">
+            <h3>${manager.name}</h3>
+            <h4><i class="bi bi-cup-fill"></i>Manager</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${manager.id}</li>
+            <li class="list-group-item">Email: ${manager.email}</li>
+            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+        </ul>
+    </div>
+</div>
+
+`
+
+
+
+
+// Writes entire HTML file after all other pieces have been put together
+const finalDocument = `
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -9,6 +32,7 @@ const template = `
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href='../dist/style.css' rel='stylesheet'>
     <title>My Team</title>
 </head>
@@ -21,19 +45,7 @@ const template = `
 
     <main>
         <div class="container-fluid row align-items-center justify-content-center m-0 p-5">
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>${employeeName}</h3>
-                        <h5>${employeeTitle}</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: ${employeeID}</li>
-                        <li class="list-group-item">Email: ${employeeEmail}</li>
-                        <li class="list-group-item">Office Number / GitHub / School</li>
-                    </ul>
-                </div>
-            </div>
+            
         </div>
     </main>
 
@@ -53,3 +65,6 @@ const template = `
 // There will need to be another function to hold all non-card HTML, using a template literal
 // to add cards of employees in the appropriate place. I think it might be best to make an array of all needed cards,
 // then join them into a string as one variable, then add that into the overall HTML file.
+
+
+module.exports = finalDocument;
