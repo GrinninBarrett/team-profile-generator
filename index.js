@@ -15,7 +15,7 @@ let fullTeam = [];
 
 // Upon starting the application, add a manager
 function addManager() {
-    return Zinquirer
+    return inquirer
         .prompt([
             {
                 type: "input",
@@ -114,9 +114,9 @@ function addEmployee() {
             // Run again if the manager wants to add more employees, return completed array if not
             if (addAnotherEmployee) {
                 return addEmployee(fullTeam); 
-            } else {
-                return fullTeam;
             }
+
+            return fullTeam;
         })
 }
 
@@ -125,9 +125,7 @@ function addEmployee() {
 function init() {
     addManager()
         .then (addEmployee)
-        .then (fullTeam => {
-            return generateHTML(fullTeam);
-        })
+        .then (generateHTML(fullTeam))
 
 }
 
