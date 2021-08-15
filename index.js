@@ -4,6 +4,7 @@ const Intern = require("./lib/Intern");
 
 const fs = require("fs");
 const inquirer = require("inquirer");
+const { inherits } = require("util");
 
 let fullTeam = [];
 
@@ -43,4 +44,11 @@ function addManager() {
 // TODO: Add function to add employee based on role or exit (finish and write HTML file)
 
 
-addManager();
+
+// This init function was made to simply follow convention - using a more appropriately-named
+// function - addManager() - is to help with clarity
+function init() {
+    addManager();
+}
+
+init();
