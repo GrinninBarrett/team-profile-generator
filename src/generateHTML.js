@@ -1,7 +1,9 @@
 const Employee = require("../lib/Employee");
 
 // Creates card for Manager
-const managerCard = `
+function managerCard() {
+
+    return `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
     <div class="card">
@@ -17,10 +19,14 @@ const managerCard = `
     </div>
 </div>
 
-`;
+    `;
+
+} 
 
 // Creates card for Engineer
-const engineerCard = `
+function engineerCard() {
+
+    return `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
     <div class="card">
@@ -36,11 +42,14 @@ const engineerCard = `
     </div>
 </div>
 
-`;
+    `;
+
+}
 
 
 // Creates card for Intern
-const internCard = `
+function internCard() {
+    return `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
     <div class="card">
@@ -55,8 +64,9 @@ const internCard = `
         </ul>
     </div>
 </div>
-
-`;
+    
+    `;
+}
 
 
 // Function to combine all added employee cards
