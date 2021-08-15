@@ -1,4 +1,4 @@
-// Creates card for employee type: manager
+// Creates card for employee type: Manager
 const managerCard = `
 
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
@@ -11,6 +11,25 @@ const managerCard = `
             <li class="list-group-item">ID: ${manager.id}</li>
             <li class="list-group-item">Email: ${manager.email}</li>
             <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+        </ul>
+    </div>
+</div>
+
+`
+
+// Creates card for employee type: Engineer
+const engineerCard = `
+
+<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 m-3">
+    <div class="card">
+        <div class="card-header">
+            <h3>${engineer.name}</h3>
+            <h4><i class="bi bi-laptop"></i></i>Engineer</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${engineer.id}</li>
+            <li class="list-group-item">Email: ${engineer.email}</li>
+            <li class="list-group-item">Office Number: ${engineer.gitHub}</li>
         </ul>
     </div>
 </div>
