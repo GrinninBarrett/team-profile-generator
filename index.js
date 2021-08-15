@@ -1,13 +1,19 @@
+// Import helper code which creates HTML code
+const generateHTML = require("./src/generateHTML");
+
+// Import subclasses of Employee class
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+// Import node modules
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { inherits } = require("util");
 
+// Create empty array to hold all team members
 let fullTeam = [];
 
+// Upon starting the application, add a manager
 function addManager() {
     return inquirer
         .prompt([
@@ -33,7 +39,10 @@ function addManager() {
             }
         ])
         .then((response) => {
+            // Destructuring assignment of variables from manager info 
             const  { name, id, email, officeNumber } = response;
+            
+            // Create new Manager class
             const manager = new Manager (name, id, email, officeNumber);
             console.log(manager);
             fullTeam.push(manager);
