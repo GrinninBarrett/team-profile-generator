@@ -33,8 +33,4 @@ describe("Employee", () => {
         expect(newHire.getRole()).toEqual("Employee");
     });
 
-
 })
-
-// Test giving new object various parameters and check that they're returning the right things
-
