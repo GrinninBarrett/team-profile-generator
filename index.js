@@ -36,17 +36,29 @@ function addManager() {
                 type: "input",
                 name: "officeNumber",
                 message: "What is the manager's office number?"
+            },
+            {
+                type: "confirm",
+                name: "addAnother",
+                message: "Would you like to add another employee?"
             }
         ])
         .then((response) => {
             // Destructuring assignment of variables from manager info 
-            const  { name, id, email, officeNumber } = response;
+            const  { name, id, email, officeNumber, addAnother } = response;
             
             // Create new Manager class
             const manager = new Manager (name, id, email, officeNumber);
             console.log(manager);
             fullTeam.push(manager);
             console.log(fullTeam);
+
+            if (addAnother) {
+                return addEmployee();
+            }
+            
+            console.log('Thanks for using blah blah blah')
+
         })
 }
 
@@ -113,7 +125,7 @@ function addEmployee() {
     
             // Run again if the manager wants to add more employees, return completed array if not
             if (addAnotherEmployee) {
-                return addEmployee(fullTeam); 
+                return addEmployee();
             }
 
             return fullTeam;
@@ -129,8 +141,13 @@ function writeFile(html) {
 
 // Upon starting the application run the appropriate functions until ending
 async function init() {
+    console.log(`
+    ===================================================
+    Please build your team by first adding the manager.
+    ===================================================
+    `)
     await addManager()
-    await addEmployee();
+    
     const html = generateHTML(fullTeam);
     writeFile(html);
 }
