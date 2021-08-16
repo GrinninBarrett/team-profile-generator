@@ -9,7 +9,7 @@ function createManagerCard(manager) {
                 <div class="card">
                     <div class="card-header">
                         <h3>${manager.name}</h3>
-                        <h4><i class="bi bi-cup-fill"></i>Manager</h4>
+                        <h4><i class="bi bi-cup-fill"></i> Manager</h4>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: ${manager.id}</li>
@@ -32,7 +32,7 @@ function createEngineerCard(engineer) {
                 <div class="card">
                     <div class="card-header">
                         <h3>${engineer.name}</h3>
-                        <h4><i class="bi bi-laptop"></i>Engineer</h4>
+                        <h4><i class="bi bi-laptop"></i> Engineer</h4>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: ${engineer.id}</li>
@@ -55,7 +55,7 @@ function createInternCard(intern) {
                 <div class="card">
                     <div class="card-header">
                         <h3>${intern.name}</h3>
-                        <h4><i class="bi bi-book"></i>Intern</h4>
+                        <h4><i class="bi bi-book"></i> Intern</h4>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: ${intern.id}</li>
