@@ -120,13 +120,19 @@ function addEmployee() {
         })
 }
 
+function writeFile(html) {
+    fs.writeFile("./dist/index.html", html, err => {
+        err ? console.error(err) : console.log("Team profile has been created! Check out the index.html file.")
+    });
+}
+
 
 // Upon starting the application run the appropriate functions until ending
-function init() {
-    addManager()
-        .then (addEmployee)
-        .then (generateHTML(fullTeam))
-
+async function init() {
+    await addManager()
+    await addEmployee();
+    const html = generateHTML(fullTeam);
+    writeFile(html);
 }
 
 init();
