@@ -108,7 +108,6 @@ function finalDocument(employeeCards) {
 
 // Function to combine all added employee cards
 function generateHTML(fullTeam) {
-    console.log(fullTeam);
 
     // Create new array of employee cards based on employee role
     const cardsArray = fullTeam.map(employee => {
@@ -135,8 +134,6 @@ function generateHTML(fullTeam) {
     const employeeCards = cardsArray.join("");
 
     const finishedHTML = finalDocument(employeeCards);
-
-    console.log(finishedHTML);
 
     return finishedHTML;
 }

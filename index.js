@@ -49,16 +49,12 @@ function addManager() {
             
             // Create new Manager class
             const manager = new Manager (name, id, email, officeNumber);
-            console.log(manager);
+
             fullTeam.push(manager);
-            console.log(fullTeam);
 
             if (addAnother) {
                 return addEmployee();
             }
-            
-            console.log('Thanks for using blah blah blah')
-
         })
 }
 
