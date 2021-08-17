@@ -33,4 +33,10 @@ describe("Intern", () => {
         expect(newHire.getRole()).toEqual("Intern");
     });
 
+    it("Should check for the Intern's school", () => {
+        const newHire = new Intern("Bob Ross", 100, "bob@paints.com", "United States Armed Forces");
+
+        expect(newHire.getSchool()).toEqual("United States Armed Forces");
+    });
+
 })
