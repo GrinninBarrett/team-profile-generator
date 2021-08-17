@@ -19,7 +19,7 @@ This tool will help users generate an HTML page to display summaries for each pe
 * JavaScript
 * Node.js
 * Inquirer npm package
-* Jest testing suite
+* Jest testing framework
 * Object Oriented Programming
 
 
