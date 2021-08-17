@@ -138,19 +138,4 @@ function generateHTML(fullTeam) {
     return finishedHTML;
 }
 
-
-
-
-// TODO: Update this file with template literals of card elements for each employee type
-// as well as a function to actually write the HTML (one card per employee) based on employee type,
-// perhaps looping through the array of all team members, checking role using the getRole()
-// method for each employee, and writing the HTML based on the role returned
-
-// I wonder if the filter() method could be good to use here ^ 
-
-// There will need to be another function to hold all non-card HTML, using a template literal
-// to add cards of employees in the appropriate place. I think it might be best to make an array of all needed cards,
-// then join them into a string as one variable, then add that into the overall HTML file.
-
-
 module.exports = generateHTML;

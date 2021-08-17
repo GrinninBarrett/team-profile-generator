@@ -1,5 +1,6 @@
 const Engineer = require('../lib/Engineer');
 
+// Tests the Engineer subclass based on various parameters
 describe("Engineer", () => {
     
     it("Should return an Engineer instance", () => {

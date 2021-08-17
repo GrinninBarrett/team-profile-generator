@@ -99,8 +99,7 @@ function addEmployee() {
             {
                 type: "confirm",
                 name: "addAnotherEmployee",
-                message: "Would you like to add another employee?",
-                default: false
+                message: "Would you like to add another employee?"
             }
         ])
         .then((response) => {    
@@ -128,6 +127,8 @@ function addEmployee() {
         })
 }
 
+
+// Write html file to the dist directory
 function writeFile(html) {
     fs.writeFile("./dist/index.html", html, err => {
         err ? console.error(err) : console.log("Team profile has been created! Check out the index.html file.")

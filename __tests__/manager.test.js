@@ -1,5 +1,6 @@
 const Manager = require('../lib/Manager');
 
+// Tests the Manager subclass based on various parameters
 describe("Manager", () => {
     
     it("Should return a Manager instance", () => {

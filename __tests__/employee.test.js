@@ -1,5 +1,6 @@
 const Employee = require('../lib/Employee');
 
+// Tests the Employee class based on various parameters
 describe("Employee", () => {
     
     it("Should return an Employee instance", () => {

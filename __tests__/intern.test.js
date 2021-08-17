@@ -1,5 +1,6 @@
 const Intern = require('../lib/Intern');
 
+// Tests the Intern subclass based on various parameters
 describe("Intern", () => {
     
     it("Should return an Intern instance", () => {
@@ -31,5 +32,5 @@ describe("Intern", () => {
 
         expect(newHire.getRole()).toEqual("Intern");
     });
-    
+
 })
