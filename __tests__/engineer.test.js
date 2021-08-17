@@ -33,4 +33,10 @@ describe("Engineer", () => {
         expect(newHire.getRole()).toEqual("Engineer");
     });
 
+    it("Should check for the Engineer's GitHub username", () => {
+        const newHire = new Engineer("Steve Wozniak", 2, "steve@apple.com", "theSteveWozniak");
+
+        expect(newHire.getGithub()).toEqual("theSteveWozniak");
+    });
+
 })
