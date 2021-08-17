@@ -1,6 +1,5 @@
 const Employee = require('../lib/Employee');
 
-// Test that returned new class is an object
 describe("Employee", () => {
     
     it("Should return an Employee instance", () => {
